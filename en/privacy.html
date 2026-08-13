@@ -18,7 +18,7 @@
   </header>
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 5 July 2026</p>
+  <p class="updated">Last updated: 13 August 2026</p>
 
   <div class="note">
     This policy explains how the <strong>Anglr</strong> app ("the App") collects and processes
@@ -53,17 +53,25 @@
 
   <h2 id="data">2. What data we collect</h2>
   <p>We collect only the data necessary to run the App:</p>
+  <p>
+    Anglr is a <strong>local-first</strong> app: the fishing content you create is stored
+    primarily in a database on your own device. It is uploaded to our servers only if you have
+    an active <strong>Premium</strong> subscription, whose cloud backup feature keeps a copy of
+    your diary on our backend. Without Premium, your content stays on your device and is not
+    transmitted to us.
+  </p>
 
   <h3>Account details</h3>
   <ul>
     <li>First and last name.</li>
-    <li>Email address (used as your username and for communication/password reset).</li>
+    <li>A username you choose.</li>
+    <li>Email address (used for sign-in and for communication/password reset).</li>
     <li>Password — always stored <strong>hashed</strong>, never in plain text.</li>
   </ul>
 
   <h3>Profile preferences</h3>
   <ul>
-    <li>Measurement units, language, time zone, country.</li>
+    <li>Measurement units, language, time zone.</li>
     <li>An optional default location (name and coordinates) that you set yourself.</li>
     <li>Interests and preferences you declare during onboarding (e.g. fish species, water types).</li>
   </ul>
@@ -76,20 +84,31 @@
     <li>Catches: species, date, details you enter.</li>
     <li>Gear (tackle box) and planned trips.</li>
   </ul>
+  <p>
+    This content lives on your device. With a Premium subscription it is also backed up to our
+    cloud database (see section 7 for what happens when a subscription ends).
+  </p>
 
   <h3>Device and security data</h3>
   <ul>
-    <li>Your device's push notification token, if you enable notifications.</li>
-    <li>Security logs: <strong>IP address</strong>, device/browser type (user agent), login history and approximate location derived from your IP. Used solely to protect your account.</li>
+    <li>Notifications are generated and scheduled <strong>locally on your device</strong>; the App does not use push notification services and no notification token is sent to us.</li>
+    <li>Authentication events (sign-up, sign-in, password reset): our backend platform processes your <strong>IP address</strong> and basic request metadata, which may appear in short-lived service logs used solely to secure the service.</li>
+  </ul>
+
+  <h3>Subscription data (Premium)</h3>
+  <ul>
+    <li>If you purchase a Premium subscription, we receive your subscription status (product, purchase and expiry dates, store transaction identifiers) from Google Play through our subscription-management provider (RevenueCat).</li>
+    <li>Payment is processed entirely by Google Play. We never receive your card or other payment details.</li>
   </ul>
 
   <h2 id="purposes">3. Purposes and legal basis</h2>
   <ul>
     <li><strong>Providing the service</strong> (account, storing spots, trips, catches) — <em>performance of a contract</em> (Art. 6(1)(b) GDPR).</li>
-    <li><strong>Location and GPS trails</strong> — based on your <em>consent</em> and because they are necessary for the feature you request (map, recording spots/trails). You can withdraw consent by disabling location access in your device settings.</li>
+    <li><strong>Location and GPS trails</strong> — based on your <em>consent</em> and because they are necessary for the feature you request (map, recording spots/trails). While you are actively recording a trail, location is also collected <strong>in the background</strong>, with a visible ongoing notification. You can withdraw consent by stopping the recording or disabling location access in your device settings.</li>
     <li><strong>Weather and marine data</strong> — we send the coordinates you choose to weather providers to show you conditions (performance of a contract).</li>
-    <li><strong>Push notifications</strong> — based on your <em>consent</em>.</li>
-    <li><strong>Security and abuse prevention</strong> (IP/login logs) — <em>legitimate interest</em> (Art. 6(1)(f) GDPR) in protecting your account.</li>
+    <li><strong>Notifications</strong> — reminders are scheduled locally on your device according to your in-app settings; no data leaves your device for this purpose.</li>
+    <li><strong>Managing your Premium subscription</strong> (activating features, verifying entitlement) — <em>performance of a contract</em> (Art. 6(1)(b) GDPR).</li>
+    <li><strong>Security and abuse prevention</strong> (authentication service logs) — <em>legitimate interest</em> (Art. 6(1)(f) GDPR) in protecting your account.</li>
   </ul>
 
   <h2 id="photos">4. Photos</h2>
@@ -102,33 +121,35 @@
   <h2 id="third">5. Third parties and recipients</h2>
   <p>We do not sell your data. We share it only with the following providers, and only to the extent needed for the corresponding feature to work:</p>
   <ul>
-    <li><strong>Google / Firebase Cloud Messaging</strong> — delivering push notifications. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Policy</a>)</li>
-    <li><strong>OpenWeather</strong> — weather data and geocoding for the coordinates you choose. (<a href="https://openweather.co.uk/privacy-policy" target="_blank" rel="noopener">Policy</a>)</li>
-    <li><strong>Open-Meteo</strong> — marine/weather data. (<a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Terms</a>)</li>
-    <li><strong>Fishial AI</strong> — fish species recognition; temporarily receives the image you capture. (<a href="https://fishial.ai" target="_blank" rel="noopener">fishial.ai</a>)</li>
-    <li><strong>ip-api.com</strong> — converting your IP address into an approximate country/location for unit settings. (<a href="https://ip-api.com/docs/legal" target="_blank" rel="noopener">Policy</a>)</li>
+    <li><strong>Supabase</strong> — our backend platform (authentication and database). It hosts your account details and, for Premium users, your cloud backup. Our database is hosted in the <strong>European Union</strong> (Frankfurt, Germany). (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Policy</a>)</li>
+    <li><strong>Open-Meteo</strong> — weather and marine data for the coordinates you choose. (<a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">Terms</a>)</li>
+    <li><strong>OpenWeather</strong> — severe weather alerts for your selected locations; requests go through our server, so your device never contacts OpenWeather directly. (<a href="https://openweather.co.uk/privacy-policy" target="_blank" rel="noopener">Policy</a>)</li>
+    <li><strong>Fishial AI</strong> — fish species recognition; temporarily receives the image you capture, relayed through our server. (<a href="https://fishial.ai" target="_blank" rel="noopener">fishial.ai</a>)</li>
+    <li><strong>RevenueCat</strong> — subscription management for Premium; receives an app user identifier and Google Play purchase information to validate your subscription. (<a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Policy</a>)</li>
+    <li><strong>Google Play</strong> — payment processing for Premium subscriptions, under your Google account terms. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Policy</a>)</li>
     <li><strong>OpenStreetMap</strong> and <strong>Esri</strong> — map tile providers; they receive map requests for the area you view. (<a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OSM</a>, <a href="https://www.esri.com/en-us/privacy/overview" target="_blank" rel="noopener">Esri</a>)</li>
   </ul>
 
   <h2 id="transfers">6. International transfers</h2>
   <p>
-    Some of the above providers (e.g. Google, Fishial) may process data outside the European
-    Economic Area, including in the United States. In such cases the transfer relies on the
-    appropriate safeguards provided by the GDPR (e.g. standard contractual clauses or adequacy
-    decisions).
+    Your account data and cloud backups are stored within the European Union (Frankfurt,
+    Germany). Some of the above providers (e.g. Fishial, RevenueCat, Google) may process data
+    outside the European Economic Area, including in the United States. In such cases the
+    transfer relies on the appropriate safeguards provided by the GDPR (e.g. standard
+    contractual clauses or adequacy decisions).
   </p>
 
   <h2 id="retention">7. Retention period</h2>
   <ul>
-    <li>Account and content data (spots, trips, catches): <strong>until you delete your account</strong>.</li>
-    <li>Security/audit logs: up to <strong>90 days</strong>.</li>
-    <li>Session refresh tokens: up to <strong>30 days</strong>.</li>
-    <li>Login history: for a limited period, for security purposes.</li>
+    <li>Account data: <strong>until you delete your account</strong>.</li>
+    <li>Content on your device (spots, trips, trails, catches, gear): under your control — it stays until you delete it, the App, or the App's data.</li>
+    <li>Premium cloud backup: while your subscription is active. If your Premium access ends, the cloud copy is kept for a <strong>90-day grace period</strong> (so you can resubscribe without losing it) and is then permanently deleted. Deleting your account deletes it immediately.</li>
+    <li>Backend service logs (e.g. authentication events): for a limited period, for security purposes.</li>
   </ul>
 
   <h2 id="security">8. Security</h2>
   <ul>
-    <li>Passwords are stored hashed with a strong algorithm (PBKDF2-HMAC-SHA512).</li>
+    <li>Passwords are stored hashed with a strong industry-standard algorithm (bcrypt).</li>
     <li>Communication with our servers uses an encrypted connection (HTTPS).</li>
     <li>Your login credentials are kept in your device's secure storage.</li>
   </ul>
@@ -144,9 +165,11 @@
     <li>withdraw your consent at any time.</li>
   </ul>
   <p>
-    To exercise any right, contact <a href="mailto:anglr.app@proton.me">anglr.app@proton.me</a>. You
-    also have the right to lodge a complaint with the <strong>Hellenic Data Protection
-    Authority</strong> (<a href="https://www.dpa.gr/en" target="_blank" rel="noopener">www.dpa.gr</a>).
+    You can delete your account directly in the App (Account screen); this permanently removes
+    your account and any cloud data. For any other request, contact
+    <a href="mailto:anglr.app@proton.me">anglr.app@proton.me</a>. You also have the right to
+    lodge a complaint with the <strong>Hellenic Data Protection Authority</strong>
+    (<a href="https://www.dpa.gr/en" target="_blank" rel="noopener">www.dpa.gr</a>).
   </p>
 
   <h2 id="children">10. Children</h2>
