@@ -12,8 +12,10 @@ style.css           Shared styling (light/dark aware)
 .nojekyll           Serve files as-is (no Jekyll processing)
 el/privacy.html     Πολιτική Απορρήτου
 el/terms.html       Όροι & Προϋποθέσεις
+el/delete-account.html  Διαγραφή λογαριασμού
 en/privacy.html     Privacy Policy
 en/terms.html       Terms & Conditions
+en/delete-account.html  Delete your account (the Google Play "delete account" web link)
 ```
 
 Preview locally by opening `index.html` in a browser (double-click). All links are relative.
